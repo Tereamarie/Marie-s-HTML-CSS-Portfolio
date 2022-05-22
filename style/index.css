@@ -91,16 +91,11 @@ body {
 		font-weight: 300;
 		font-size: 13pt;
 }
-h1 {
-	font-family: 'Great Vibes', cursive;
-	margin: 20px 0;
-	/*=======  Update the font size to 60px and center the text */
-	font-size: 60px;
-	text-align: center;
-	color:#8b3a62;
-  }
-  
-  h2, h3, h4, h5, h6 {
+
+  strong {
+	  color: orange
+	}
+ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Great Vibes', cursive;
 	margin-bottom: 0;
 	padding: 0 10px;
@@ -126,49 +121,74 @@ h1 {
   */
   
 .container {
-	border: 2px dashed black;
+	border: 5px dashed black;
 	margin: 0 auto;
     max-width: 100%;
     background: #fffff0;
     padding: 20px 50px;
 }
-nav {
-	border: 3px dashed red;
+  
+.top-nav nav{
+	border: 2px solid red;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
 }
-  nav a {
-	 border: 4px dashed rgb(228, 207, 10);
-	margin: 0 6px;
-	
-	padding: 10px;
+
+ nav a {
+	margin-top: 10px;
+	width: 15%;
+	border: 1px solid rgb(103, 21, 210);
+	padding: 1.5px;
 	display: inline-block;
-	border-radius: 10px;
+	border-radius: 20px;
 	color: white;
 	text-decoration: none;
-	margin-bottom: 10px;
+	text-align: center;
+	margin-bottom: 20px;
 	 /*======= create a background property. Set the value to #F87B99 */
-	background:#a9e1e2;
+	background:#0d0d0d;
 	box-shadow:10px 10px 5px  grey;
+ }
+ nav a:hover {
+	 background-color: rgb(14, 14, 15);
+	 text-decoration: none;
+	 background: #0e0e0e;
+	 color: white;
+	 border: 2px solid rgb(148, 11, 179);
+	 -webkit-transition: .3s;
+	 transition: .3s;
+	 transform: rotate(360deg);
+  } 
+  #about .intro{
+	 border: 3px dashed rgba(255, 0, 187, 0.774);
+	 display: flex;
+	 flex-wrap: wrap;
+	 justify-content: space-around;
   }
-  
-   header nav a:hover {
-  /*======= create a background property and set it to white.  Then create a color property and set it's value to pink. */
-	background: #d248a2;
-	color: white;
-	border: 1px solid pink;
-	-webkit-transition: .3s;
-	transition: .3s;
-	transform: rotate(360deg);
-	
-  }
-  
-  #about {
-	  border: 3px dashed rgba(255, 0, 187, 0.774);
-  }
-
-  /* .container {
-	width: 100%; /* Full width 
-	background-color: #ddd; /* Grey background 
-  } */
+  #about .intro h1, h2{
+	  border: 3px solid black;
+	}
+	#about .intro p{
+		color: red;
+		border: 1px solid red;
+	}
+	 button{
+		font-size: 16px;
+		padding:10px;
+	    width: 15%;
+		margin: 25px;
+		height: 10vh;
+        border: 1px solid black;
+		border-radius: 10px;
+		
+	}
+   img {
+	   border: 1px solid black;
+	   border-radius: 20px;
+	   width: 10em;
+   }
   
   .skills {
 	border: 3px dashed rgb(183, 127, 36);
@@ -181,8 +201,15 @@ nav {
   #box-style1 {
 	  border: 3px solid green;
   }
+  .skills  h3 {
+	  border: 1px dashed rgb(94, 210, 17);
+	  display: flex;
+	  
+  }
   #box-style1 .meter {
+	  border: 2px dashed red;
 	box-sizing: content-box;
+	width: 25%;
 	height: 20px; /* Can be anything */
 	position: relative;
 	margin: 60px 0 20px 0; /* Just for demo spacing */
@@ -257,17 +284,262 @@ nav {
 .red > span {
   background-image: linear-gradient(#f0a3a3, #f42323);
 }
+.projects {
+	border: 3px solid purple;
+}
+.container {
+	margin: 0 auto;
+	max-width: calc(100% - 50px);
+	width: 1200px;
+}
 
-/* .nostripes > span > span,
-.nostripes > span::after {
-  background-image: none;
-} */
-/* a {
-	-moz-transition: color .2s ease-in-out;
-	-webkit-transition: color .2s ease-in-out;
-	-ms-transition: color .2s ease-in-out;
-	transition: color .2s ease-in-out;
-	color: #4382e0;
-	text-decoration: underline;
+	.container.medium {
+		width: 900px;
+	}
+
 	
-} */
+
+	
+
+	
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	align-items: stretch;
+}
+
+	.row > * {
+		box-sizing: border-box;
+	}
+
+	.row.gtr-uniform > * > :last-child {
+		margin-bottom: 0;
+	}
+
+	.row.aln-left {
+		justify-content: flex-start;
+	}
+
+	.row.aln-center {
+		justify-content: center;
+	}
+
+	.row.aln-right {
+		justify-content: flex-end;
+	}
+
+	.row.aln-top {
+		align-items: flex-start;
+	}
+
+	.row.aln-middle {
+		align-items: center;
+	}
+
+	.row.aln-bottom {
+		align-items: flex-end;
+	}
+
+	.row > .imp {
+		order: -1;
+	}
+
+	.row > .col-1 {
+		width: 8.33333%;
+	}
+
+	.row > .off-1 {
+		margin-left: 8.33333%;
+	}
+
+	.row > .col-2 {
+		width: 16.66667%;
+	}
+
+	.row > .off-2 {
+		margin-left: 16.66667%;
+	}
+
+	.row > .col-3 {
+		width: 25%;
+	}
+
+	.row > .off-3 {
+		margin-left: 25%;
+	}
+
+	.row > .col-4 {
+		width: 33.33333%;
+	}
+
+	.row > .off-4 {
+		margin-left: 33.33333%;
+	}
+
+	.row > .col-5 {
+		width: 41.66667%;
+	}
+
+	.row > .off-5 {
+		margin-left: 41.66667%;
+	}
+
+	.row > .col-6 {
+		width: 50%;
+	}
+
+	.row > .off-6 {
+		margin-left: 50%;
+	}
+
+	.row > .col-7 {
+		width: 58.33333%;
+	}
+
+	.row > .off-7 {
+		margin-left: 58.33333%;
+	}
+
+	.row > .col-8 {
+		width: 66.66667%;
+	}
+
+	.row > .off-8 {
+		margin-left: 66.66667%;
+	}
+
+	.row > .col-9 {
+		width: 75%;
+	}
+
+	.row > .off-9 {
+		margin-left: 75%;
+	}
+
+	.row > .col-10 {
+		width: 83.33333%;
+	}
+
+	.row > .off-10 {
+		margin-left: 83.33333%;
+	}
+
+	.row > .col-11 {
+		width: 91.66667%;
+	}
+
+	.row > .off-11 {
+		margin-left: 91.66667%;
+	}
+
+	.row > .col-12 {
+		width: 100%;
+	}
+
+	.row > .off-12 {
+		margin-left: 100%;
+	}
+
+	.row.gtr-0 {
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+
+		.row.gtr-0 > * {
+			padding: 0px 0 0 0px;
+		}
+
+		.row.gtr-0.gtr-uniform {
+			margin-top: 0px;
+		}
+
+			.row.gtr-0.gtr-uniform > * {
+				padding-top: 0px;
+			}
+
+	.row.gtr-25 {
+		margin-top: -6.25px;
+		margin-left: -6.25px;
+	}
+
+		.row.gtr-25 > * {
+			padding: 6.25px 0 0 6.25px;
+		}
+
+		.row.gtr-25.gtr-uniform {
+			margin-top: -6.25px;
+		}
+
+			.row.gtr-25.gtr-uniform > * {
+				padding-top: 6.25px;
+			}
+
+	.row.gtr-50 {
+		margin-top: -12.5px;
+		margin-left: -12.5px;
+	}
+
+		.row.gtr-50 > * {
+			padding: 12.5px 0 0 12.5px;
+		}
+
+		.row.gtr-50.gtr-uniform {
+			margin-top: -12.5px;
+		}
+
+			.row.gtr-50.gtr-uniform > * {
+				padding-top: 12.5px;
+			}
+
+	.row {
+		margin-top: -25px;
+		margin-left: -25px;
+	}
+
+		.row > * {
+			padding: 25px 0 0 25px;
+		}
+
+		.row.gtr-uniform {
+			margin-top: -25px;
+		}
+
+			.row.gtr-uniform > * {
+				padding-top: 25px;
+			}
+
+	.row.gtr-150 {
+		margin-top: -37.5px;
+		margin-left: -37.5px;
+	}
+
+		.row.gtr-150 > * {
+			padding: 37.5px 0 0 37.5px;
+		}
+
+		.row.gtr-150.gtr-uniform {
+			margin-top: -37.5px;
+		}
+
+			.row.gtr-150.gtr-uniform > * {
+				padding-top: 37.5px;
+			}
+
+	.row.gtr-200 {
+		margin-top: -50px;
+		margin-left: -50px;
+	}
+
+		.row.gtr-200 > * {
+			padding: 50px 0 0 50px;
+		}
+
+		.row.gtr-200.gtr-uniform {
+			margin-top: -50px;
+		}
+
+			.row.gtr-200.gtr-uniform > * {
+				padding-top: 50px;
+			}
+			
