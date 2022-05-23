@@ -90,6 +90,7 @@ body {
 		color: rgb(14, 13, 13);
 		font-weight: 300;
 		font-size: 13pt;
+		border: 3px solid red;
 }
 
   strong {
@@ -99,7 +100,7 @@ body {
 	font-family: 'Great Vibes', cursive;
 	margin-bottom: 0;
 	padding: 0 10px;
-	/*=======  Update the font size to 30px */
+	
 	
 	font-size: 30px;
 	color: #8b3a62;
@@ -114,81 +115,99 @@ body {
 	line-height: 1.4;
   }
   
-  /*======= Create a selector for ALL images in the site to have the following styles: 
-  
-	border-radius: 10px;
-  
-  */
-  
 .container {
 	border: 5px dashed black;
 	margin: 0 auto;
-    max-width: 100%;
+    width: 100%;
     background: #fffff0;
-    padding: 20px 50px;
+    padding: 20 20 50px;
+	line-height: 1.85em;
 }
-  
-.top-nav nav{
-	border: 2px solid red;
+ header {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center; 
+   width: 94.5%;
+   height: 15vh;
+	margin: 25px auto 0;
+	margin-top: 0px;
+	padding: 24px;
+    
+	background-color: #555;
+	position: fixed;
+ } 
+ img {
+	box-shadow:5px 5px 5px  grey;
+	border-radius: 45%;
+	width: 4em;
+ }
+header nav a {
+    display: inline-block;
+	margin:30px;
+	background-color: purple;
+	color: white;
+	font-size: 14px;
+	text-decoration: none;
+	/* border: 2px solid black; */
+	border-radius: 10px;
+	padding: 4px;
 }
 
- nav a {
-	margin-top: 10px;
-	width: 15%;
-	border: 1px solid rgb(103, 21, 210);
-	padding: 1.5px;
-	display: inline-block;
-	border-radius: 20px;
+
+  header nav a:hover {
+	background: #d248a2;
 	color: white;
-	text-decoration: none;
-	text-align: center;
-	margin-bottom: 20px;
-	 /*======= create a background property. Set the value to #F87B99 */
-	background:#0d0d0d;
-	box-shadow:10px 10px 5px  grey;
- }
- nav a:hover {
-	 background-color: rgb(14, 14, 15);
-	 text-decoration: none;
-	 background: #0e0e0e;
-	 color: white;
-	 border: 2px solid rgb(148, 11, 179);
-	 -webkit-transition: .3s;
-	 transition: .3s;
-	 transform: rotate(360deg);
-  } 
-  #about .intro{
-	 border: 3px dashed rgba(255, 0, 187, 0.774);
-	 display: flex;
-	 flex-wrap: wrap;
-	 justify-content: space-around;
+	border: 1px solid pink;
+	-webkit-transition: .3s;
+	transition: .3s;
+	transform: rotate(360deg);
   }
-  #about .intro h1, h2{
-	  border: 3px solid black;
-	}
-	#about .intro p{
-		color: red;
-		border: 1px solid red;
-	}
-	 button{
-		font-size: 16px;
-		padding:10px;
-	    width: 15%;
-		margin: 25px;
-		height: 10vh;
-        border: 1px solid black;
-		border-radius: 10px;
-		
-	}
-   img {
-	   border: 1px solid black;
-	   border-radius: 20px;
-	   width: 10em;
-   }
+  /* HEADER NAV ends here */
+  .cta {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border: 10px dashed rgba(255, 0, 187, 0.774);
+	margin-top: 90px;
+	height: 35vh;
+	
+}
+.intro h1{
+	width: 100%;
+}
+.intro h2 {
+	text-align: center;
+}
+.intro button {
+	width: 25%;
+	margin-left: 150px;
+}
+.intro p {
+	color: rgb(59, 54, 59) ;
+	font-style: italic;
+	font-size: bold;
+}
+ button {
+	 border: 5px dashed red;
+	 border-radius: 10px;
+	 color: white;
+	 background: #d267d2;
+	 
+}
+.intro button:hover {
+	background-color: #280a9d;
+	animation: hinge 2s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes hinge {
+	0% { transform: rotate(0); transform-origin: top left; animation-timing-function: ease-in-out; }  
+	20%, 60% { transform: rotate(80deg); transform-origin: top left; animation-timing-function: ease-in-out; }  
+	40% { transform: rotate(60deg); transform-origin: top left; animation-timing-function: ease-in-out; } 
+	80% { transform: rotate(60deg) translateY(0); opacity: 1; transform-origin: top left; animation-timing-function: ease-in-out; } 
+	100% { transform: translateY(500px); opacity: 0; }
+  }
+/* /////////////////////////////////////////////////// */
   
   .skills {
 	border: 3px dashed rgb(183, 127, 36);
