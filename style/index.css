@@ -201,41 +201,47 @@ p {
 	font-size: 34px;  
 }
 
-button {
+/* button {
   font-size: 16px;
   padding: 5px 40px 5px 40px;
   border: 1px solid black;
-}
+} */
 
-.content {
+/* .content {
   border-top: 1px solid black;
   border-bottom: 1px solid black;  
   margin: 30px; 
-}
+} */
 
 .services-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;  
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;  
-  margin: 30px;
-  padding-bottom: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; 
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;  
+    margin: 25px auto 0;
+    padding-bottom: 40px;
 }
 
 .service-item {
-  margin: 40px 0 0 0;
+	margin: 40px 0 0 0;
   padding: 20px;
   background: lightgrey;
   border: 1px solid black;
   width: 400px;
 }
+.service-item h2 {
+	margin-left: 94px;
+	margin: 
+	color: red; 
+}
+
 
 .service-item  .meter {
   line-height: 18px;
    border: 2px dashed red;
 	box-sizing: content-box;
-	width: 100%;
+	width: 90%;
 	height: 20px; /* Can be anything */
 	position: relative;
 	margin: 60px 0 20px 0; /* Just for demo spacing */
@@ -310,6 +316,8 @@ button {
 .red > span {
   background-image: linear-gradient(#f0a3a3, #f42323);
 }
+
+/* ------------------------------------ */
 .projects {
 	border: 3px solid purple;
 }
