@@ -114,9 +114,7 @@ header nav a:hover {
 
 
 
-p {
-  line-height: 18px;
-}
+
 
 
  img  {
@@ -145,21 +143,21 @@ p {
 
 
 .cta h1 {
-	color: orange;
+	color: rgb(17, 18, 18);
 	font-size: 72px;
 	
 }
 
 
 .intro .h1{
-	color: red;
+	color: rgb(7, 7, 7);
 	text-align: center;
 	padding: 20px;
 	
 }
 
 .intro p {
-	color: rgb(23, 200, 7) ;
+	color: rgb(46, 47, 45) ;
     margin-left: 54px;
 	font-size: bold;
 	font-family: "Ubuntu", sans-serif;
@@ -320,7 +318,8 @@ p {
 
 .project-container {
   margin-top: 24px;
-	
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; 
   line-height: 18px;
   box-sizing: content-box;
 }
@@ -612,10 +611,11 @@ p {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	width: 100%;
 	padding: 20px;
-    margin: 0 auto;
+    margin-top: 10px;
+	line-height: 75px;
 	
 }
 .service-facts-item h2 {
@@ -624,16 +624,28 @@ p {
 .service-facts-item p{
   color: rgb(24, 23, 21);
 }
- nav a{
+.service-facts-item nav{
+	display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center; 
+   width: 100%;
+   height: 13vh;
+	margin: 25px auto 0;
+	margin-top: 0px;
+	margin-bottom: 24px;
+	padding: 24px;
+}
+ .service-facts-item nav a{
+	 align-content: center;
 	 background-color: #b7d88f;
-	margin: 52px 15px 0 40px;
-	margin-bottom: 34px;
-  color: rgb(10, 10, 10);
+	 margin: 52px 15px 0 40px;
+	color: rgb(10, 10, 10);
   font-size: 14px;
   text-decoration: none;
   border: 1px solid#111112;
   border-radius: 10px;
-  padding: 4px;
+  width: 50%;
   font-family: "Ubuntu", sans-serif;
  }
  nav a:hover { 
@@ -643,10 +655,12 @@ p {
 
 footer {
 	margin: 20px 30px 90px 30px;
+	
   }
   
   .copyright {
 	text-align: center;
 	font-size: 14px;
 	margin-top: 50px;
+	margin-bottom: 24px;
   }
